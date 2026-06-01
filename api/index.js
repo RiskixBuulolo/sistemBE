@@ -19,7 +19,7 @@ app.use(helmet({
 // express.static('/public') DIHAPUS karena file upload sudah tidak dihosting di lokal Vercel.
 
 // === 2. ROUTES ===
-const apiRoutes = require('./routes/apiRoutes');
+const apiRoutes = require('../routes/apiRoutes');
 app.use('/api', apiRoutes); 
 
 app.get('/', (req, res) => {
