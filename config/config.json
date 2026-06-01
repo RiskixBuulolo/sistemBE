@@ -15,7 +15,13 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "mysql://22zckvPoBqdnpLR.root:<PASSWORD>@gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/db_sistem_labor",
-    "dialect": "mysql"
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
